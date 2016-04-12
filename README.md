@@ -5,9 +5,11 @@
 
 # Install
 
+ Make sure you have python pip installed - [python pip](https://pip.pypa.io/en/stable/installing)
+
 `pip install dotfiles`
 
-`git clone git@github.com:alexeastaugh/Dotfiles.git`
+`git clone https://github.com/alexeastaugh/Dotfiles.git`
 
 `ln -s ~/Dotfiles/.dotfilesrc` # run from home dir
 
