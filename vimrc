@@ -1,4 +1,4 @@
-" Alex Eastaugh .vimrc
+" Alex Eastaugh ~/.vimrc
 
 " Startup
   set nocompatible " explicitly get out of vi-compatible mode
