@@ -1,11 +1,13 @@
 # Alex Eastaugh ~/.bash_aliases
 
 # bash
+alias aliases='grep alias ~/.bash_aliases'
+alias ls='ls --color=always'
 alias ..='cd ..'
 alias ll='ls -l'
 alias la='ls -lA'
 alias ping='ping -c 4'
-alias grep='grep --color=auto'
+alias grep='grep --color=always'
 
 # tmux
 alias lst='tmux list-sessions'
