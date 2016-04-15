@@ -1,7 +1,7 @@
 # Alex Eastaugh ~/.bash_aliases
 
 # bash
-alias aliases='grep alias ~/.bash_aliases'
+alias aliases='grep alias ~/.bash_aliases | tail -n +3'
 alias ls='ls --color=always'
 alias ..='cd ..'
 alias ll='ls -l'
