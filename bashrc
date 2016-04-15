@@ -7,16 +7,10 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# Alias's
-# bash
-alias ..='cd ..'
-alias ll='ls -l'
-alias la='ls -lA'
-alias ping='ping -c 4'
-# tmux
-alias lst='tmux list-sessions'
-alias re='tmux attach -t'
-alias newt='tmux new -s'
+# Aliases
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
 
 # Prompt
 #PS1='[\u@\h \W]\$ '
