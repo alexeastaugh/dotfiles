@@ -10,5 +10,5 @@ alias grep='grep --color=auto'
 # tmux
 alias lst='tmux list-sessions'
 alias re='tmux attach -t'
-alias newt='tmux new -s'
+alias newt='tmux new -s' #"They mostly come out at night, mostly"
 
