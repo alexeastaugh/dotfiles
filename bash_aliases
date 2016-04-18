@@ -18,6 +18,7 @@ alias killt='tmux kill-session -t'
 # git
 alias gs='git status'
 alias ga='git add'
+alias gc='git commit' #for commit messages that require an editor
 alias gcm='git commit -m'
 alias gp='git push'
 alias gl='git log'
