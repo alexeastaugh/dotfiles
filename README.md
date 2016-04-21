@@ -9,9 +9,9 @@
 
 `pip install dotfiles`
 
-`git clone https://github.com/alexeastaugh/Dotfiles.git`
+`git clone https://github.com/alexeastaugh/dotfiles.git`
 
-`ln -s ~/Dotfiles/.dotfilesrc` # run from home dir
+`ln -s ~/dotfiles/.dotfilesrc` # run from home dir
 
 `dotfiles -c` # check what files will be linked
 
