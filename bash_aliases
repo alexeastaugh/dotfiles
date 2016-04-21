@@ -3,7 +3,7 @@
 # bash
 alias aliases='grep alias ~/.bash_aliases | tail -n +3'
 alias projects='cd ~/projects; ls -l'
-alias ffs='sudo !!'
+alias ffs='sudo "$BASH" -c "$(history -p !!)"'
 alias ls='ls --color=always'
 alias ..='cd ..'
 alias ll='ls -l'
