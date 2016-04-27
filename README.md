@@ -4,12 +4,12 @@
 
 ### example:
 
-'git clone https://github.com/alexeastaugh/dotfiles.git'
+ 'git clone https://github.com/alexeastaugh/dotfiles.git'
 
-'$ cd ~/dotfiles'
+ '$ cd ~/dotfiles'
 
-'$ stow bash'
+ '$ stow bash'
 
 ### rtfm:
 
-'$ stow --help'
+ '$ stow --help'
