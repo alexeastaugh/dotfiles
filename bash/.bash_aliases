@@ -10,6 +10,7 @@ alias ll='ls -l'
 alias la='ls -lA'
 alias ping='ping -c 4'
 alias grep='grep --color=always'
+alias ip='ip -c' #This outputs in colour"
 
 # tmux
 alias lst='tmux list-sessions'
