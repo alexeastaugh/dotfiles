@@ -31,4 +31,4 @@ entry               = green     black   bold
 entry_title         = green     black   bold
 error               = red       black   bold
 message             = green     black   bold
-plist_time          = green	black	bold
+plist_time          = green     black   bold
