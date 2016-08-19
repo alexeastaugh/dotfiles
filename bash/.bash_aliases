@@ -10,19 +10,21 @@ alias ll='ls -l'
 alias la='ls -lA'
 alias ping='ping -c 4'
 alias grep='grep --color=always'
+alias ip='ip -c' # This outputs in colour
+alias weather='curl wttr.in' # Nice terminal weather forecast
 
 # tmux
 alias lst='tmux list-sessions'
 alias re='tmux attach -t'
-alias newt='tmux new -s' #"They mostly come out at night, mostly"
+alias newt='tmux new -s' # "They mostly come out at night, mostly"
 alias killt='tmux kill-session -t'
 
 # git
 alias gs='git status'
 alias ga='git add'
-alias gc='git commit' #for commit messages that require an editor
+alias gc='git commit' # for commit messages that require an editor
 alias gcm='git commit -m'
 alias gp='git push'
 alias gl='git log'
 alias greset='git reset --soft HEAD^' # Remove last commit but keeps changes staged
-alias greset-hard='git reset --hard HEAD^' #Remove last commit AND all changes from staging/files
+alias greset-hard='git reset --hard HEAD^' # Remove last commit AND all changes from staging/files
