@@ -14,6 +14,7 @@ alias ping='ping -c 4'
 alias grep='grep --color=always'
 alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
+alias wiki='cd /var/www/wikitten/library'
 
 # tmux
 alias lst='tmux list-sessions'
