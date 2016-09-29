@@ -2,7 +2,7 @@
 
 # bash
 alias aliases='grep alias ~/.bash_aliases | tail -n +3'
-alias projects='cd ~/projects; ls -l'
+alias projects='cd ~/projects; echo "You are now in $PWD"; ls -l'
 alias ffs='sudo "$BASH" -c "$(history -p !!)"'
 alias ls='ls --color=always'
 alias ..='cd ..'
