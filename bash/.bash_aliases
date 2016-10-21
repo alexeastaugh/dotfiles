@@ -2,7 +2,6 @@
 
 # bash
 alias aliases='grep alias ~/.bash_aliases | tail -n +3'
-alias projects='cd ~/projects; echo "You are now in $PWD"; ls -l'
 alias ffs='sudo "$BASH" -c "$(history -p !!)"'
 alias ls='ls --color=always'
 alias ..='cd ..'
@@ -15,6 +14,15 @@ alias grep='grep --color=always'
 alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
 alias wiki='cd /var/www/wikitten/library'
+
+# bash functions
+function projects() {
+  if [ -d ~/projects ]; then
+    cd ~/projects; echo "You are now in $PWD"; ls -l
+      else
+    echo "Projects folder not yet created"
+  fi
+}
 
 # tmux
 alias lst='tmux list-sessions'
