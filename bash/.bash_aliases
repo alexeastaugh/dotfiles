@@ -2,16 +2,19 @@
 
 # bash
 alias aliases='grep alias ~/.bash_aliases | tail -n +3'
-alias projects='cd ~/projects; ls -l'
+alias projects='cd ~/projects; echo "You are now in $PWD"; ls -l'
 alias ffs='sudo "$BASH" -c "$(history -p !!)"'
 alias ls='ls --color=always'
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias ll='ls -l'
 alias la='ls -lA'
 alias ping='ping -c 4'
 alias grep='grep --color=always'
 alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
+alias wiki='cd /var/www/wikitten/library'
 
 # tmux
 alias lst='tmux list-sessions'
