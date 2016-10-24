@@ -19,7 +19,7 @@ alias wiki='cd /var/www/wikitten/library'
 function projects() {
   if [ -d ~/projects ]; then
     cd ~/projects; echo "You are now in $PWD"; ls -l
-      else
+    else
     echo "Projects folder not yet created"
   fi
 }
