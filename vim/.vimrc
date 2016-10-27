@@ -17,6 +17,8 @@
   set cursorline " highlight current line
   set wildmenu " visual autocomplete for command menu
   set relativenumber " Show relative number
+
+" Sounds
   set noeb vb t_vb= " Turns off the bell
   au GUIEnter * set vb t_vb=  
 
