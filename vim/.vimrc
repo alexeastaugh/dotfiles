@@ -6,14 +6,13 @@
 " Colours
   syntax on " enable syntax highlighting
   colorscheme desert
-    
+
 " Spaces and Tabs
   set expandtab " tabs are spaces
   set tabstop=2 " number of visual spaces per TAB
   set shiftwidth=2 " number of spaces in a tab when editing
 
 " General and UI Config
-  set ruler " displays line number and curser position 
   set showcmd " show the command in bottom bar
   set cursorline " highlight current line
   set wildmenu " visual autocomplete for command menu
