@@ -16,7 +16,6 @@
   set showcmd " show the command in bottom bar
   set cursorline " highlight current line
   set wildmenu " visual autocomplete for command menu
-  set showmatch " highlight matching [{()}]
   set relativenumber " Show relative number
   
 " Searching
