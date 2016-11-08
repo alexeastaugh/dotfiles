@@ -13,7 +13,7 @@ alias ping='ping -c 4'
 alias grep='grep --color=always'
 alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
-alias wiki='cd /var/www/wikitten/library'
+alias wiki='cd /var/www/wikitten/library; echo "You are now in $PWD"; ls -l'
 alias dotfiles='cd ~/dotfiles; echo "You are now in $PWD"; ls -l'
 
 # bash functions
