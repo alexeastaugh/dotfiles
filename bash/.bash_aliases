@@ -14,13 +14,14 @@ alias grep='grep --color=always'
 alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
 alias wiki='cd /var/www/wikitten/library'
+alias dotfiles='cd ~/dotfiles; echo "You are now in $PWD"; ls -l'
 
 # bash functions
 function projects() {
-  if [ -d ~/projects ]; then
+  if [ -d ~/projects ];then
     cd ~/projects; echo "You are now in $PWD"; ls -l
-    else
-    echo "Projects folder not yet created"
+      else
+      echo "Projects folder not yet created"
   fi
 }
 
