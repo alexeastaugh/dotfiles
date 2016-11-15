@@ -9,7 +9,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Prompt
-export PS1="\[$(tput setaf 7)\][\[$(tput setaf 5)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 5)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 7)\]]\\$ \[$(tput sgr0)\]"
+export PS1="\[$(tput setaf 7)\][\[$(tput setaf 5)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 5)\]\h \[$(tput setaf 2)\]\w\[$(tput setaf 7)\]]\\$ \[$(tput sgr0)\]"
 
 # History
 HISTCONTROL=ignoreboth
