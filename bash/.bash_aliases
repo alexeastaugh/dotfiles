@@ -1,6 +1,6 @@
 # Alex Eastaugh ~/.bash_aliases
 
-# bash
+# Bash
 alias aliases='grep alias ~/.bash_aliases | tail -n +3'
 alias ffs='sudo "$BASH" -c "$(history -p !!)"'
 alias ls='ls --color=always'
@@ -15,7 +15,7 @@ alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
 alias wiki='cd /var/www/wikitten/library; echo "You are now in $PWD"; ls -l'
 
-# bash functions
+# Bash Functions
 function projects() {
   if [ -d ~/projects ];then
     cd ~/projects; echo "You are now in $PWD"; ls -l
@@ -28,13 +28,13 @@ function dots() {
   cd ~/dotfiles; echo "You are now in $PWD"; ls -l
 }
 
-# tmux
+# Tmux
 alias lst='tmux list-sessions'
 alias re='tmux attach -t'
 alias newt='tmux new -s' # "They mostly come out at night, mostly"
 alias killt='tmux kill-session -t'
 
-# git
+# Git
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit' # for commit messages that require an editor
