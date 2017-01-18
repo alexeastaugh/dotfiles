@@ -12,10 +12,10 @@ fi
 export PS1="\[$(tput setaf 7)\][\[$(tput setaf 5)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 5)\]\h \[$(tput setaf 2)\]\w\[$(tput setaf 7)\]]\\$ \[$(tput sgr0)\]"
 
 # History
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth # Ignore duplicates AND commands that start with spaces (ignorespace, ignoredups)
 shopt -s histappend
 HISTSIZE=10000
-#HISTFILESIZE=2000
+HISTFILESIZE=2000
 
 # Bash completion
 if ! shopt -oq posix; then                                                                         
