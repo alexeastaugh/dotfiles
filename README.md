@@ -4,10 +4,13 @@
 
 ### example:
 
+Clone repo
  `git clone https://github.com/alexeastaugh/dotfiles.git`
 
+Move into repo directory
  `$ cd ~/dotfiles`
 
+To use the Bash dots
  `$ stow bash`
 
 ### rtfm:
