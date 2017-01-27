@@ -35,6 +35,7 @@ alias newt='tmux new -s' # "They mostly come out at night, mostly"
 alias killt='tmux kill-session -t'
 
 # Git
+alias pull='git pull'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit' # for commit messages that require an editor
