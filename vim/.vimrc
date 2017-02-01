@@ -5,7 +5,7 @@
    
 " Colours
 	syntax on " enable syntax highlighting
-	colorscheme darkblue
+	colorscheme elflord 
 
 " Spaces and Tabs
 	set expandtab " tabs are spaces
