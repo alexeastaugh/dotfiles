@@ -30,6 +30,10 @@ function dots() {
   cd ~/dotfiles; echo "You are now in $PWD"; ls -l
 }
 
+function generatekey() {
+    ssh-keygen -t rsa -b 4096 -C "$@"
+}
+
 # Tmux
 alias lst='tmux list-sessions'
 alias re='tmux attach -t'
