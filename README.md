@@ -1,4 +1,5 @@
 Adding some random text here so that I can test branching and merging.
+Even more changes being made.
 
 # dotfiles
 
