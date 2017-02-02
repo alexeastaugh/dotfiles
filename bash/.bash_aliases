@@ -17,7 +17,7 @@ alias wiki='cd /var/www/wikitten/library; echo "You are now in $PWD"; ls -l'
 alias verifypubkey='ssh-keygen -l -f'
 alias gitauthentication='ssh -T git@github.com'
 
-# Bash Functions
+# projects - Takes you to the prjects folder and lists the contents
 function projects() {
   if [ -d ~/projects ];then
     cd ~/projects; echo "You are now in $PWD"; ls -l
@@ -26,10 +26,12 @@ function projects() {
   fi
 }
 
+# dots - Take me to your dotfiles
 function dots() {
   cd ~/dotfiles; echo "You are now in $PWD"; ls -l
 }
 
+# generatekey - Creates an rsa key with 4096 bytes and add the key name to the comments
 function generatekey() {
     if [ $# -eq 0 ];then
         echo "Please supply a comment for the key file"
