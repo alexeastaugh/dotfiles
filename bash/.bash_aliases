@@ -19,16 +19,16 @@ alias gitauthentication='ssh -T git@github.com'
 
 # projects - Takes you to the prjects folder and lists the contents
 function projects() {
-  if [ -d ~/projects ];then
-    cd ~/projects; echo "You are now in $PWD"; ls -l
-      else
-      echo "Projects folder not yet created"
-  fi
+    if [ -d ~/projects ];then
+        cd ~/projects; echo "You are now in $PWD"; ls -l
+    else
+        echo "Projects folder not yet created"
+    fi
 }
 
 # dots - Take me to your dotfiles
 function dots() {
-  cd ~/dotfiles; echo "You are now in $PWD"; ls -l
+    cd ~/dotfiles; echo "You are now in $PWD"; ls -l
 }
 
 # generatekey - Creates an rsa key with 4096 bytes and add the key name to the comments
