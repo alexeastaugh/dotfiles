@@ -14,7 +14,7 @@ alias grep='grep --color=always'
 alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
 alias wiki='cd /var/www/wikitten/library; echo "You are now in $PWD"; ls -l'
-alias verifykey='ssh-keygen -l -E md5 -f'
+alias verifypubkey='ssh-keygen -l -f'
 alias gitauthentication='ssh -T git@github.com'
 
 # Bash Functions
@@ -31,7 +31,11 @@ function dots() {
 }
 
 function generatekey() {
-    ssh-keygen -t rsa -b 4096 -C "$@"
+    if [ $# -eq 0 ];then
+        echo "Please supply a comment for the key file"
+    else    
+        ssh-keygen -t rsa -b 4096 -C "$@"
+    fi
 }
 
 # Tmux
