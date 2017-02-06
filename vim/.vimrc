@@ -16,7 +16,7 @@
 	set showcmd " show the command in bottom bar
 	set cursorline " highlight current line
 	set wildmenu " visual autocomplete for command menu
-	set relativenumber " Show relative number
+	"set relativenumber " Show relative number
 
 " Sounds
 	set noeb vb t_vb= " Turns off the bell
