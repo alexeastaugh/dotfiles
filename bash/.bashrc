@@ -8,8 +8,8 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
-# Prompt
-export PS1="\[$(tput setaf 7)\][\[$(tput setaf 5)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 5)\]\h \[$(tput setaf 2)\]\w\[$(tput setaf 7)\]]\\$ \[$(tput sgr0)\]"
+# ANSI prompt
+PS1='\n\033[0;37;40m\u @ \h\033[m \033[35m\w\033[m > '
 
 # History
 HISTCONTROL=ignoreboth # Ignore duplicates AND commands that start with spaces (ignorespace, ignoredups)
