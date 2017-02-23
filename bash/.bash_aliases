@@ -6,7 +6,6 @@ alias ffs='sudo "$BASH" -c "$(history -p !!)"'
 alias ls='ls --color=always'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd ../../..'
 alias ll='ls -l'
 alias la='ls -lA'
 alias ping='ping -c 4'
@@ -15,9 +14,8 @@ alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
 alias wiki='cd /var/www/wikitten/library; echo "You are now in $PWD"; ls -l'
 alias verifypubkey='ssh-keygen -l -f'
-alias gitauthentication='ssh -T git@github.com'
 
-# projects - Takes you to the prjects folder and lists the contents
+# projects - Takes you to the projects folder and lists the contents
 function projects() {
     if [ -d ~/projects ];then
         cd ~/projects; echo "You are now in $PWD"; ls -l
@@ -32,7 +30,7 @@ function dots() {
 }
 
 # generatekey - Creates an rsa key with 4096 bytes and add the key name to the comments
-function generatekey() {
+function sshgeneratekey() {
     if [ $# -eq 0 ];then
         echo "Please supply a comment for the key file"
     else    

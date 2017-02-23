@@ -11,9 +11,9 @@ fi
 # Prompt is red if switched to root (sudo -s)
 if [ $(id -u) -eq 0 ];
 then
-    PS1='\n\033[0;37;41m\u @ \h\033[m \033[35m\w\033[m > '
+    PS1='\033[0;37;41m\u @ \h\033[m \033[35m\w\033[m > '
 else
-    PS1='\n\033[0;37;40m\u @ \h\033[m \033[35m\w\033[m > '
+    PS1='\033[0;37;40m\u @ \h\033[m \033[35m\w\033[m > '
 fi
 
 # History
