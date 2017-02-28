@@ -8,11 +8,6 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
-# Git branch for PS1
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 # Prompt is red if switched to root (sudo -s)
 if [ $(id -u) -eq 0 ];
 then
@@ -24,7 +19,7 @@ else
     # Default
     #PS1='\n\033[1;36m\h\033[m\n\033[0;37m\u\033[m \033[35m\w\033[m > '
     # Includes git branch
-    PS1='\n\033[1;36m\h\033[m\n\033[0;37m\u\033[m\033[1;33m$(parse_git_branch)\033[m \033[35m\w\033[m > '
+    PS1='\n\033[1;36m\h\033[m\n\033[0;37m\u\033[m\033[1;32m$(__git_ps1 " (%s)")\033[m \033[35m\w\033[m > '
 fi
 
 # History
