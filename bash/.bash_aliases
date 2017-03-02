@@ -38,6 +38,9 @@ function sshgeneratekey() {
     fi
 }
 
+# Scrot - screenshot tool
+alias scrot='scrot -q100 -s'
+
 # Tmux
 alias lst='tmux list-sessions'
 alias re='tmux attach -t'
