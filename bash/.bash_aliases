@@ -54,6 +54,7 @@ alias ga='git add'
 alias gc='git commit' # for commit messages that require an editor
 alias gcm='git commit -m'
 alias gp='git push'
+alias gb='git branch'
 alias gco='git checkout'
 alias gl='git log'
 alias greset='git reset --soft HEAD^' # Remove last commit but keeps changes staged
