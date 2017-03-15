@@ -16,9 +16,7 @@ then
 else
     # Testing
     #PS1='\033[0;37;46m\u\033[m \033[36m\h \033[m\033[35m\w\033[m > '
-    # Default
-    #PS1='\n\033[1;36m\h\033[m\n\033[0;37m\u\033[m \033[35m\w\033[m > '
-    # Includes git branch
+    # Default (includes git branch)
     PS1='\n\033[1;36m\h\033[m\n\033[0;37m\u\033[m\033[1;32m$(__git_ps1 " (%s)")\033[m \033[35m\w\033[m > '
 fi
 
