@@ -38,6 +38,14 @@ function sshgeneratekey() {
     fi
 }
 
+function cookbooks() {
+    if [ -d ~/projects/cookbooks ];then
+        cd ~/projects/cookbooks; echo "You are now in $PWD"; ls
+    else
+        echo "Cookbooks have not been cloned yet!"
+    fi
+}
+
 # Scrot - screenshot tool
 alias scrot='scrot -q100 -s'
 
