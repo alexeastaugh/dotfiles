@@ -15,6 +15,16 @@ alias weather='curl wttr.in' # Nice terminal weather forecast
 alias wiki='cd /var/www/wikitten/library; echo "You are now in $PWD"; ls -l'
 alias verifypubkey='ssh-keygen -l -f'
 
+# virtualbox start headless
+function vbstart() {
+    vboxmanage startvm "$@" --type headless
+}
+
+# virtualbox stop
+function vbstop() {
+    VBoxManage controlvm "$@" poweroff --type headless
+}
+
 # projects - Takes you to the projects folder and lists the contents
 function projects() {
     if [ -d ~/projects ];then
