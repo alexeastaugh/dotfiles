@@ -77,3 +77,12 @@ alias gco='git checkout'
 alias gl='git log'
 alias greset='git reset --soft HEAD^' # Remove last commit but keeps changes staged
 alias greset-hard='git reset --hard HEAD^' # Remove last commit AND all changes from staging/files
+
+################
+# WORK ALIASES #
+################
+
+# ssh to old platform using ip address
+connect() {
+    ssh -i ~/.ssh/alex_vd/GetOpticsAWSKey2013.pem ubuntu@"$@"
+}
