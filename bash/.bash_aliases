@@ -15,6 +15,13 @@ alias weather='curl wttr.in' # Nice terminal weather forecast
 alias wiki='cd /var/www/wikitten/library; echo "You are now in $PWD"; ls -l'
 alias verifypubkey='ssh-keygen -l -f'
 
+# virtualbox list vm's
+function vblist() {
+    echo
+    vboxmanage list vms
+    echo
+}
+
 # virtualbox start headless
 function vbstart() {
     vboxmanage startvm "$@" --type headless
