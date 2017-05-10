@@ -29,7 +29,7 @@ function vbstart() {
 
 # virtualbox stop
 function vbstop() {
-    VBoxManage controlvm "$@" poweroff --type headless
+    vboxmanage controlvm "$@" poweroff --type headless
 }
 
 # projects - Takes you to the projects folder and lists the contents
