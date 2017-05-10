@@ -25,6 +25,7 @@ HISTCONTROL=ignoreboth # Ignore duplicates AND commands that start with spaces (
 shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=2000
+HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Bash completion
 if ! shopt -oq posix; then                                                                   
