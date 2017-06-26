@@ -14,6 +14,7 @@ alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
 alias wiki='cd /var/www/wikitten/library; echo "You are now in $PWD"; ls -l'
 alias verifypubkey='ssh-keygen -l -f'
+alias tree='tree -C' # Always output dir colours
 
 # virtualbox list vm's
 function vblist() {
