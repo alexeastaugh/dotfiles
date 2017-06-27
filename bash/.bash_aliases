@@ -1,5 +1,10 @@
 # Alex Eastaugh ~/.bash_aliases
 
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
+CEXIT='\033[0m'
+
 # Bash
 alias aliases='grep alias ~/.bash_aliases | tail -n +3'
 alias ffs='sudo "$BASH" -c "$(history -p !!)"'
@@ -19,7 +24,8 @@ alias tree='tree -C' # Always output dir colours
 # virtualbox list vm's
 function vblist() {
     echo
-    vboxmanage list vms
+    VBL=$(vboxmanage list vms)
+    echo -e ${GREEN}${VBL}${CEXIT}
     echo
 }
 
@@ -36,31 +42,31 @@ function vbstop() {
 # projects - Takes you to the projects folder and lists the contents
 function projects() {
     if [ -d ~/projects ];then
-        cd ~/projects; echo "You are now in $PWD"; ls -l
+        cd ~/projects; echo -e ${GREEN}"You are now in${CEXIT} ${RED}${PWD}${CEXIT}"; ls -l
     else
-        echo "Projects folder not yet created"
+        echo -e ${RED}"Projects folder not yet created"${CEXIT}
     fi
 }
 
 # dots - Take me to your dotfiles
 function dots() {
-    cd ~/dotfiles; echo "You are now in $PWD"; ls -l
+    cd ~/dotfiles; echo -e ${GREEN}"You are now in${CEXIT} ${RED}${PWD}${CEXIT}"; ls -l
 }
 
 # generatekey - Creates an rsa key with 4096 bytes and add the key name to the comments
 function sshgeneratekey() {
     if [ $# -eq 0 ];then
-        echo "Please supply a comment for the key file"
-    else    
+        echo -e ${RED}"Please supply a comment for the key file"${CEXIT}
+    else
         ssh-keygen -t rsa -b 4096 -C "$@"
     fi
 }
 
 function cookbooks() {
     if [ -d ~/projects/cookbooks ];then
-        cd ~/projects/cookbooks; echo "You are now in $PWD"; ls
+        cd ~/projects/cookbooks; echo -e ${GREEN}"You are now in${CEXIT} ${RED}${PWD}${CEXIT}"; ls
     else
-        echo "Cookbooks have not been cloned yet!"
+        echo -e ${RED}"Cookbooks have not been cloned yet!"${CEXIT}
     fi
 }
 
