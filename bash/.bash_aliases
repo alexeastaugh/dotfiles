@@ -25,7 +25,7 @@ alias tree='tree -C' # Always output dir colours
 function vblist() {
     echo
     VBL=$(vboxmanage list vms)
-    echo -e ${GREEN}${VBL}${CEXIT}
+    echo -e ${GREEN}"${VBL}"${CEXIT}
     echo
 }
 
