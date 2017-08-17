@@ -100,3 +100,8 @@ alias greset-hard='git reset --hard HEAD^' # Remove last commit AND all changes 
 connect() {
     ssh -i ~/.ssh/alex_vd/GetOpticsAWSKey2013.pem ubuntu@"$@"
 }
+
+# Skip the jumpbox and go straight to point B
+function jump() {
+    ssh -t jumpbox1 ssh aeastaugh@"$@"
+}
