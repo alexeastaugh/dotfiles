@@ -6,7 +6,7 @@ RED='\033[0;31m'
 CEXIT='\033[0m'
 
 # Bash
-alias aliases='grep alias ~/.aliases | tail -n +3'
+alias aliases='grep "alias\|function" ~/.aliases | tail -n +3'
 alias ffs='sudo "$BASH" -c "$(history -p !!)"'
 alias ls='ls --color=always'
 alias ..='cd ..'
@@ -99,4 +99,9 @@ alias greset-hard='git reset --hard HEAD^' # Remove last commit AND all changes 
 # ssh to old platform using ip address
 connect() {
     ssh -i ~/.ssh/alex_vd/GetOpticsAWSKey2013.pem ubuntu@"$@"
+}
+
+# Skip the jumpbox and go straight to point B
+function jump() {
+    ssh -t jumpbox1 ssh aeastaugh@"$@"
 }
