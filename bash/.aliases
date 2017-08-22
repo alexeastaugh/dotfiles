@@ -5,7 +5,7 @@ YELLOW='\033[0;33m'
 RED='\033[0;31m'
 CEXIT='\033[0m'
 
-# Bash
+# Aliases and functions
 alias aliases='grep "alias\|function" ~/.aliases | tail -n +3'
 alias ffs='sudo "$BASH" -c "$(history -p !!)"'
 alias ls='ls --color=always'
@@ -62,6 +62,7 @@ function sshgeneratekey() {
     fi
 }
 
+# cookbooks - Take me to your cookbooks
 function cookbooks() {
     if [ -d ~/projects/cookbooks ];then
         cd ~/projects/cookbooks; echo -e ${GREEN}"You are now in${CEXIT} ${RED}${PWD}${CEXIT}"; ls
