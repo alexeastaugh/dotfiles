@@ -5,10 +5,11 @@ export ZSH=/home/alex/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="kolo"
 #ZSH_THEME="pygmalion"
-ZSH_THEME="theunraveler"
+#ZSH_THEME="theunraveler"
+ZSH_THEME="agnoster"
 
 # Plugins ~/.oh-my-zsh/plugins/*
-plugins=(git tmux kitchen man)
+plugins=(git tmux kitchen)
 
 # Aliases and Functions
 source $ZSH/oh-my-zsh.sh
@@ -16,7 +17,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 source $HOME/.aliases
 
-# Invoke Powerline
-if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
-    source /usr/share/powerline/bindings/zsh/powerline.zsh
-fi
+# Invoke Powerline - overrides theme
+#if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
+#    source /usr/share/powerline/bindings/zsh/powerline.zsh
+#fi
