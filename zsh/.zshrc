@@ -17,7 +17,3 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 source $HOME/.aliases
 
-# Invoke Powerline - overrides theme
-#if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
-#    source /usr/share/powerline/bindings/zsh/powerline.zsh
-#fi
