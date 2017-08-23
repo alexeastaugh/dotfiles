@@ -33,3 +33,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Colour palette entries for gnome terminal colours
+#363333 - Palette entry 1
+#DE5F5F - Palette entry 2
+#82B882 - Palette entry 3
+#CCCC66 - Palette entry 4
+#7EA2C5 - Palette entry 5
+#B88AB8 - Palette entry 6
+#77CCCC - Palette entry 7
+#E5E5E5 - Palette entry 8
