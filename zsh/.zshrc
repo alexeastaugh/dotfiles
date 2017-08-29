@@ -17,3 +17,5 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 source $HOME/.aliases
 
+# ChefDK Ruby
+export PATH="/opt/chefdk/embedded/bin:$PATH"
