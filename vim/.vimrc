@@ -9,8 +9,8 @@
 
 " Spaces and Tabs
 	set expandtab " tabs are spaces
-	set tabstop=4 " number of visual spaces per TAB
-	set shiftwidth=4 " number of spaces in a tab when editing
+	set tabstop=2 " number of visual spaces per TAB
+	set shiftwidth=2 " number of spaces in a tab when editing
 
 " General and UI Config
 	set showcmd " show the command in bottom bar
