@@ -34,6 +34,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PATH="/opt/chefdk/embedded/bin:$PATH"
+
 # Colour palette entries for gnome terminal colours
 #363333 - Palette entry 1
 #DE5F5F - Palette entry 2

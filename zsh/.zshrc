@@ -16,4 +16,4 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 source $HOME/.aliases
-
+export PATH="/opt/chefdk/embedded/bin:$PATH"
