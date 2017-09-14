@@ -19,3 +19,10 @@ source $HOME/.aliases
 
 # ChefDK Ruby
 export PATH="/opt/chefdk/embedded/bin:$PATH"
+
+if [ -f /usr/local/bin/wal ]; then
+  # Import colorscheme from 'wal'
+  # &   # Run the process in the background.
+  # ( ) # Hide shell job control messages.
+  (wal -r &)
+fi
