@@ -37,6 +37,7 @@ fi
 export PATH="/opt/chefdk/embedded/bin:$PATH"
 
 # Colour palette entries for gnome terminal colours
+# This is just for reference
 #363333 - Palette entry 1
 #DE5F5F - Palette entry 2
 #82B882 - Palette entry 3
