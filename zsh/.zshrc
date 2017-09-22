@@ -9,7 +9,7 @@ export ZSH=/home/alex/.oh-my-zsh
 ZSH_THEME="agnoster"
 
 # Plugins ~/.oh-my-zsh/plugins/*
-plugins=(git tmux kitchen)
+plugins=(git tmux kitchen aws)
 
 # Aliases and Functions
 source $ZSH/oh-my-zsh.sh
