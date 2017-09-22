@@ -5,7 +5,7 @@
 
 # Aliases
 if [ -f ~/.aliases ]; then
-  . ~/.aliases
+    . ~/.aliases
 fi
 
 # Prompt is red if switched to root (sudo -s)
@@ -15,7 +15,7 @@ then
     PS1='\033[1;37;41m\u@\h\033[m \033[35m\w\033[m # '
 else
     # Default
-    PS1='\033[0;37;46m\u\033[m\033[36m\h \033[m\033[35m\w\033[m > '
+    PS1='\033[0;37;46m\u\033[m \033[36m\h \033[m\033[35m\w\033[m > '
 fi
 
 # History
@@ -27,11 +27,11 @@ HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Bash completion
 if ! shopt -oq posix; then                                                                   
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 export PATH="/opt/chefdk/embedded/bin:$PATH"

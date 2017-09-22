@@ -8,7 +8,6 @@ CEXIT='\033[0m'
 # Aliases and functions
 alias aliases='grep "alias\|function" ~/.aliases | tail -n +3'
 alias ffs='sudo "$BASH" -c "$(history -p !!)"'
-alias ls='ls --color=always'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ll='ls -l'
