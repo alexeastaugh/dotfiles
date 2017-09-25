@@ -34,10 +34,12 @@ if ! shopt -oq posix; then
     fi
 fi
 
-export PATH="/opt/chefdk/embedded/bin:$PATH"
+# ChefDK Ruby path
+if [ -f /opt/chefdk/embedded/bin ]; then
+    export PATH="/opt/chefdk/embedded/bin:$PATH"
+fi
 
-# Colour palette entries for gnome terminal colours
-# This is just for reference
+# Colour palette entries for gnome terminal colours. This is just for reference if applying manually
 #363333 - Palette entry 1
 #DE5F5F - Palette entry 2
 #82B882 - Palette entry 3
