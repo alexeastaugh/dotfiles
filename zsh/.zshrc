@@ -3,9 +3,6 @@ export ZSH=/home/alex/.oh-my-zsh
 
 # Theme
 #ZSH_THEME="robbyrussell"
-#ZSH_THEME="kolo"
-#ZSH_THEME="pygmalion"
-#ZSH_THEME="theunraveler"
 ZSH_THEME="agnoster"
 
 # Plugins ~/.oh-my-zsh/plugins/*
