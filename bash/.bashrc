@@ -37,6 +37,14 @@ fi
 # ChefDK Ruby path
 export PATH="/opt/chefdk/embedded/bin:$PATH"
 
+# Pywal on all teminals 
+if [ -f /usr/local/bin/wal ]; then
+  # Import colorscheme from 'wal'
+  # &   # Run the process in the background.
+  # ( ) # Hide shell job control messages.
+  (wal -r &)
+fi
+
 # Colour palette entries for gnome terminal colours. This is just for reference if applying manually
 #363333 - Palette entry 1
 #DE5F5F - Palette entry 2
