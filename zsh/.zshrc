@@ -2,7 +2,6 @@
 export ZSH=/home/alex/.oh-my-zsh
 
 # Theme
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
 # Plugins ~/.oh-my-zsh/plugins/*
@@ -17,6 +16,7 @@ source $HOME/.aliases
 # ChefDK Ruby
 export PATH="/opt/chefdk/embedded/bin:$PATH"
 
+# PyWal persistent for new shells
 if [ -f /usr/local/bin/wal ]; then
   # Import colorscheme from 'wal'
   # &   # Run the process in the background.
