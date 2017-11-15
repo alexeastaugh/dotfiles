@@ -4,8 +4,13 @@ export ZSH=/home/alex/.oh-my-zsh
 # Theme
 #ZSH_THEME="agnoster"
 #ZSH_THEME="kolo"
-ZSH_THEME="terminalparty"
+#ZSH_THEME="terminalparty"
 #ZSH_THEME="theunraveler"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# Powerlevel9k tweaks
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(rbenv vcs status root_indicator background_jobs history time)
 
 # Plugins ~/.oh-my-zsh/plugins/*
 plugins=(git kitchen aws)
