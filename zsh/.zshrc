@@ -2,7 +2,10 @@
 export ZSH=/home/alex/.oh-my-zsh
 
 # Theme
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+#ZSH_THEME="kolo"
+ZSH_THEME="terminalparty"
+#ZSH_THEME="theunraveler"
 
 # Plugins ~/.oh-my-zsh/plugins/*
 plugins=(git kitchen aws)
