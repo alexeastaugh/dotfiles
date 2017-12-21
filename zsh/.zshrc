@@ -2,8 +2,8 @@
 export ZSH=/home/alex/.oh-my-zsh
 
 # Theme
-#ZSH_THEME="agnoster"
-ZSH_THEME="terminalparty"
+ZSH_THEME="agnoster"
+#ZSH_THEME="terminalparty"
 #ZSH_THEME="theunraveler"
 #ZSH_THEME="powerlevel9k/powerlevel9k" # Make sure this one installed.
 
@@ -12,7 +12,7 @@ ZSH_THEME="terminalparty"
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(rbenv vcs status root_indicator background_jobs history time)
 
 # Plugins ~/.oh-my-zsh/plugins/*
-plugins=(git kitchen aws)
+plugins=(git kitchen knife aws)
 
 # Aliases and Functions
 source $ZSH/oh-my-zsh.sh
