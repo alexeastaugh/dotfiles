@@ -22,6 +22,15 @@ alias tree='tree -C' # Always output dir colours
 #alias wal='wal -t -b "#222D32"' # Colour for Adapta theme
 alias wal='wal -t -b "#2F343F"' # Colour for Arc theme
 
+# Knife commands
+knife-bootstrap() {
+    knife bootstrap "$@" --ssh-user root --identity-file ~/.ssh/alex_personal/alex_01022017/alex_01022017 --node-name eastaughnode1 --run-list \'"$@"\'
+}
+
+knife-chef-client-run() {
+   knife ssh 'name:"$@"' 'sudo chef-client' --ssh-user root --identity-file ~/.ssh/alex_personal/alex_01022017/alex_01022017 --attribute ipaddress 
+}
+
 # virtualbox list vm's
 function vblist() {
     echo
@@ -111,4 +120,20 @@ connect() {
 # Skip the jumpbox and go straight to point B
 function jump() {
     ssh -t jumpbox1 ssh aeastaugh@"$@"
+}
+
+function backup_mailbox_estimate() {
+    sudo /home/alex/projects/gyb/gyb --email "$@" --action estimate 
+}
+
+# Gmail backups with gyb
+function backup_mailbox() {
+    if mount | grep 10.0.1.218 > /dev/null; then
+        echo -e ${GREEN}"EFS is already mounted. Now backing up mailbox"${CEXIT}
+        sudo /home/alex/projects/gyb/gyb --email "$@" --local-folder /efs/Mailboxes/"$@"
+    else
+        sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.0.1.218:/ /efs 
+        echo -e  ${GREEN}"EFS is now mounted. Moving onto backup of mailbox"${CEXIT}
+        sudo /home/alex/projects/gyb/gyb --email "$@" --local-folder /efs/Mailboxes/"$@"
+    fi
 }
