@@ -122,6 +122,7 @@ function jump() {
     ssh -t jumpbox1 ssh aeastaugh@"$@"
 }
 
+# Gmail backup estimate with gyb
 function backup_mailbox_estimate() {
     sudo /home/alex/projects/gyb/gyb --email "$@" --action estimate 
 }
@@ -135,5 +136,17 @@ function backup_mailbox() {
         sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.0.1.218:/ /efs 
         echo -e  ${GREEN}"EFS is now mounted. Moving onto backup of mailbox"${CEXIT}
         sudo /home/alex/projects/gyb/gyb --email "$@" --local-folder /efs/Mailboxes/"$@"
+    fi
+}
+
+# Gmail restore with gyb
+function restore_mailbox() {
+    if mount | grep 10.0.1.218 > /dev/null; then
+        echo -e ${GREEN}"EFS is already mounted. Now restoring mailbox"${CEXIT}
+        sudo /home/alex/projects/gyb/gyb --email "$1" --action restore --local-folder /efs/Mailboxes/"$2" --label-restored "$2"
+    else
+        sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.0.1.218:/ /efs 
+        echo -e  ${GREEN}"EFS is now mounted. Moving onto the restore of mailbox"${CEXIT}
+        sudo /home/alex/projects/gyb/gyb --email "$1" --action restore --local-folder /efs/Mailboxes/"$2" --label-restored "$2"
     fi
 }
