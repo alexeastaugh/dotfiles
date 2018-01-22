@@ -74,8 +74,8 @@ function sshgeneratekey() {
 
 # cookbooks - Take me to your cookbooks
 function cookbooks() {
-    if [ -d ~/projects/cookbooks ];then
-        cd ~/projects/cookbooks; echo -e ${GREEN}"You are now in${CEXIT} ${RED}${PWD}${CEXIT}"; ls
+    if [ -d /home/$(whoami)/cookbooks ];then
+        cd /home/$(whoami)/cookbooks; echo -e ${GREEN}"You are now in${CEXIT} ${RED}${PWD}${CEXIT}"; ls
     else
         echo -e ${RED}"Cookbooks have not been cloned yet!"${CEXIT}
     fi
