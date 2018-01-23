@@ -23,10 +23,9 @@ source $HOME/.aliases
 # ChefDK Ruby
 export PATH="/opt/chefdk/embedded/bin:$PATH"
 
-# PyWal persistent for new shells
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
 if [ -f /usr/local/bin/wal ]; then
-  # Import colorscheme from 'wal'
-  # &   # Run the process in the background.
-  # ( ) # Hide shell job control messages.
-  (wal -r &)
+    (cat ~/.cache/wal/sequences &)
 fi
