@@ -4,7 +4,7 @@
 URxvt.termName: rxvt-unicode
 URxvt.geometry: 145x45
 URxvt.loginShell: true
-URxvt.internalBorder: 20
+URxvt.internalBorder: 40
 URxvt.lineSpace: 0
 URxvt*saveLines: 12000
 URxvt*scrollBar: false
