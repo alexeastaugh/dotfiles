@@ -1,6 +1,6 @@
 ! Alex Eastaugh ~/.Xresources
 
-!! urxvt settings
+! urxvt settings
 URxvt.termName: rxvt-unicode
 URxvt.geometry: 145x45
 URxvt.loginShell: true
@@ -13,10 +13,64 @@ URxvt*fading:  50
 URxvt*urgentOnBell: false
 URxvt.visualBell:true
 
-!! fonts
+! fonts
 !URxvt.font: xft:Terminess Powerline:size=13
 !URxvt.boldFont: xft:Terminess Powerline:size=13
 URxvt.font: xft:Terminess Powerline:pixelsize=17
 URxvt.boldFont: xft:Terminess Powerline:pixelsize=17
-!URxvt.font: xft:Terminus:pixelsize=18
-!URxvt.boldFont: xft:Terminus:pixelsize=18
+
+! Colours
+URxvt*foreground:   #d7d2ce
+URxvt*background:   [100]#2F343F
+URxvt*cursorColor:  #d7d2ce
+URxvt*borderColor:  [100]#2F343F
+
+! Colors 0-15.
+*.color0: #2F343F
+*color0:  #2F343F
+*.color1: #E9AD79
+*color1:  #E9AD79
+*.color2: #1E6D8B
+*color2:  #1E6D8B
+*.color3: #5F7089
+*color3:  #5F7089
+*.color4: #2D94A8
+*color4:  #2D94A8
+*.color5: #59A6B1
+*color5:  #59A6B1
+*.color6: #58BDC8
+*color6:  #58BDC8
+*.color7: #d7d2ce
+*color7:  #d7d2ce
+*.color8: #969390
+*color8:  #969390
+*.color9: #E9AD79
+*color9:  #E9AD79
+*.color10: #1E6D8B
+*color10:  #1E6D8B
+*.color11: #5F7089
+*color11:  #5F7089
+*.color12: #2D94A8
+*color12:  #2D94A8
+*.color13: #59A6B1
+*color13:  #59A6B1
+*.color14: #58BDC8
+*color14:  #58BDC8
+*.color15: #d7d2ce
+*color15:  #d7d2ce
+
+! Black color that will not be affected by bold highlighting.
+*.color66: #2F343F
+*color66:  #2F343F
+
+! Xclock
+XClock*foreground: #d7d2ce
+XClock*background: #2F343F
+XClock*majorColor:  rgba:d7/d2/ce/ff
+XClock*minorColor:  rgba:d7/d2/ce/ff
+XClock*hourColor:   rgba:d7/d2/ce/ff
+XClock*minuteColor: rgba:d7/d2/ce/ff
+XClock*secondColor: rgba:d7/d2/ce/ff
+
+! Set depth to make transparency work.
+URxvt*depth: 32
