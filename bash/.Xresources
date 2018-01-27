@@ -1,0 +1,20 @@
+! Alex Eastaugh ~/.Xresources
+
+!! urxvt settings
+URxvt.termName: rxvt-unicode
+URxvt.geometry: 145x45
+URxvt.loginShell: true
+URxvt.internalBorder: 20
+URxvt.lineSpace: 0
+URxvt*saveLines: 12000
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*fading:  50
+
+!! fonts
+!URxvt.font: xft:Terminess Powerline:size=13
+!URxvt.boldFont: xft:Terminess Powerline:size=13
+URxvt.font: xft:Terminess Powerline:pixelsize=17
+URxvt.boldFont: xft:Terminess Powerline:pixelsize=17
+!URxvt.font: xft:Terminus:pixelsize=18
+!URxvt.boldFont: xft:Terminus:pixelsize=18
