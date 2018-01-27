@@ -10,6 +10,8 @@ URxvt*saveLines: 12000
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*fading:  50
+URxvt*urgentOnBell: false
+URxvt.visualBell:true
 
 !! fonts
 !URxvt.font: xft:Terminess Powerline:size=13
