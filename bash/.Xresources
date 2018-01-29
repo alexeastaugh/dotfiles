@@ -13,12 +13,13 @@ URxvt*fading:  50
 URxvt*urgentOnBell: false
 URxvt.visualBell: true
 URxvt.cursorBlink: 1
+URxvt.clipboard.autocopy:true
 
 ! fonts
-!URxvt.font: xft:Terminess Powerline:size=13
-!URxvt.boldFont: xft:Terminess Powerline:size=13
-URxvt.font: xft:Terminess Powerline:pixelsize=17
-URxvt.boldFont: xft:Terminess Powerline:pixelsize=17
+URxvt.font:xft:Terminess Powerline:size=11
+URxvt.boldFont:xft:Terminess Powerline:size=11
+!URxvt.font:xft:Terminess Powerline:pixelsize=17
+!URxvt.boldFont:xft:Terminess Powerline:pixelsize=17
 
 ! Colours
 URxvt*foreground:   #d7d2ce
