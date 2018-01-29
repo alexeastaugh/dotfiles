@@ -2,16 +2,17 @@
 
 ! urxvt settings
 URxvt.termName: rxvt-unicode
-URxvt.geometry: 145x45
+URxvt.geometry: 120x50
 URxvt.loginShell: true
-URxvt.internalBorder: 40
+URxvt.internalBorder: 35
 URxvt.lineSpace: 0
 URxvt*saveLines: 12000
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*fading:  50
 URxvt*urgentOnBell: false
-URxvt.visualBell:true
+URxvt.visualBell: true
+URxvt.cursorBlink: 1
 
 ! fonts
 !URxvt.font: xft:Terminess Powerline:size=13
