@@ -1,23 +1,24 @@
 ! Alex Eastaugh ~/.Xresources
 
 ! urxvt settings
-URxvt.termName: rxvt-unicode
-URxvt.geometry: 145x45
-URxvt.loginShell: true
-URxvt.internalBorder: 40
-URxvt.lineSpace: 0
-URxvt*saveLines: 12000
-URxvt*scrollBar: false
-URxvt*scrollBar_right: false
-URxvt*fading:  50
-URxvt*urgentOnBell: false
+URxvt.termName:rxvt-unicode
+URxvt.geometry:145x45
+URxvt.loginShell:true
+URxvt.internalBorder:40
+URxvt.lineSpace:0
+URxvt*saveLines:12000
+URxvt*scrollBar:false
+URxvt*scrollBar_right:false
+URxvt*fading:50
+URxvt*urgentOnBell:false
 URxvt.visualBell:true
+URxvt.clipboard.autocopy:true
 
 ! fonts
-!URxvt.font: xft:Terminess Powerline:size=13
-!URxvt.boldFont: xft:Terminess Powerline:size=13
-URxvt.font: xft:Terminess Powerline:pixelsize=17
-URxvt.boldFont: xft:Terminess Powerline:pixelsize=17
+URxvt.font:xft:Terminess Powerline:size=11
+URxvt.boldFont:xft:Terminess Powerline:size=11
+!URxvt.font:xft:Terminess Powerline:pixelsize=17
+!URxvt.boldFont:xft:Terminess Powerline:pixelsize=17
 
 ! Colours
 URxvt*foreground:   #d7d2ce
