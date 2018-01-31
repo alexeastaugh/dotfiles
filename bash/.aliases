@@ -150,3 +150,22 @@ function restore_mailbox() {
         sudo /home/alex/projects/gyb/gyb --email "$1" --action restore --local-folder /efs/Mailboxes/"$2" --label-restored "$2"
     fi
 }
+
+# AWS Hostname + IP Address
+# Add the variables below
+
+ONDEMAND=XXXXXXXXXX
+STAGING=XXXXXXXXXX
+LIVE=XXXXXXXXXX
+
+function ondemand_instances() {
+    aws --profile vdtest --region eu-west-1 opsworks describe-instances --stack-id ${ONDEMAND} | jq -r '.Instances[] | {Hostname: .Hostname, "IP Address": .PrivateIp}'
+}
+
+function staging_instances() {
+    aws opsworks describe-instances --stack-id ${STAGING} | jq -r '.Instances[] | {Hostname: .Hostname, "IP Address": .PrivateIp}'    
+}
+
+function live_instances() {
+    aws --region us-east-1 opsworks describe-instances --stack-id ${LIVE} | jq -r '.Instances[] | {Hostname: .Hostname, "IP Address": .PrivateIp}'
+}
