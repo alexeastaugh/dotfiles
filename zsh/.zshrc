@@ -2,9 +2,11 @@
 export ZSH=/home/alex/.oh-my-zsh
 
 # Theme
+#ZSH_THEME="random"
+ZSH_THEME="jbergantine"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="terminalparty"
-ZSH_THEME="theunraveler"
+#ZSH_THEME="theunraveler"
 #ZSH_THEME="powerlevel9k/powerlevel9k" # Make sure this one installed.
 
 # Powerlevel9k tweaks
