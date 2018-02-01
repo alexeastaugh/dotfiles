@@ -14,7 +14,7 @@ ZSH_THEME="jbergantine"
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(rbenv vcs status root_indicator background_jobs history time)
 
 # Plugins ~/.oh-my-zsh/plugins/*
-plugins=(git kitchen aws knife)
+plugins=(git kitchen aws knife docker)
 
 # Aliases and Functions
 source $ZSH/oh-my-zsh.sh
