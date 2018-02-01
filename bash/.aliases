@@ -124,18 +124,18 @@ function jump() {
 
 # Gmail backup estimate with gyb
 function backup_mailbox_estimate() {
-    sudo /home/alex/projects/gyb/gyb --email "$@" --action estimate 
+    sudo python3 /opt/got-your-back/gyb.py --email "$@" --action estimate 
 }
 
 # Gmail backups with gyb
 function backup_mailbox() {
     if mount | grep 10.0.1.218 > /dev/null; then
         echo -e ${GREEN}"EFS is already mounted. Now backing up mailbox"${CEXIT}
-        sudo /home/alex/projects/gyb/gyb --email "$@" --local-folder /efs/Mailboxes/"$@"
+        sudo python3 /opt/got-your-back/gyb.py --email "$@" --local-folder /efs/Mailboxes/"$@"
     else
         sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.0.1.218:/ /efs 
         echo -e  ${GREEN}"EFS is now mounted. Moving onto backup of mailbox"${CEXIT}
-        sudo /home/alex/projects/gyb/gyb --email "$@" --local-folder /efs/Mailboxes/"$@"
+        sudo python3 /opt/got-your-back/gyb.py --email "$@" --local-folder /efs/Mailboxes/"$@"
     fi
 }
 
@@ -143,20 +143,18 @@ function backup_mailbox() {
 function restore_mailbox() {
     if mount | grep 10.0.1.218 > /dev/null; then
         echo -e ${GREEN}"EFS is already mounted. Now restoring mailbox"${CEXIT}
-        sudo /home/alex/projects/gyb/gyb --email "$1" --action restore --local-folder /efs/Mailboxes/"$2" --label-restored "$2"
+        sudo python3 /opt/got-your-back/gyb.py --email "$1" --action restore --local-folder /efs/Mailboxes/"$2" --label-restored "$2"
     else
         sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.0.1.218:/ /efs 
         echo -e  ${GREEN}"EFS is now mounted. Moving onto the restore of mailbox"${CEXIT}
-        sudo /home/alex/projects/gyb/gyb --email "$1" --action restore --local-folder /efs/Mailboxes/"$2" --label-restored "$2"
+        sudo python3 /opt/got-your-back/gyb.py --email "$1" --action restore --local-folder /efs/Mailboxes/"$2" --label-restored "$2"
     fi
 }
 
 # AWS Hostname + IP Address
 # Add the variables below
 
-ONDEMAND=XXXXXXXXXX
-STAGING=XXXXXXXXXX
-LIVE=XXXXXXXXXX
+ONDEMAND='d51793be-d715-483c-a52a-effe7d888536'                                                 STAGING='c6a1d4c3-5ac4-43d3-a37a-5a7e8159ded7'                                                  LIVE='ff9f2b5c-aeab-47da-a0b6-e19363652523'
 
 function ondemand_instances() {
     aws --profile vdtest --region eu-west-1 opsworks describe-instances --stack-id ${ONDEMAND} | jq -r '.Instances[] | {Hostname: .Hostname, "IP Address": .PrivateIp}'
