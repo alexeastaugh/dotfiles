@@ -151,19 +151,17 @@ function restore_mailbox() {
     fi
 }
 
-# AWS Hostname + IP Address
+# AWS Hostname + IP ADDRESS
 # Add the variables below
 
-ONDEMAND='d51793be-d715-483c-a52a-effe7d888536'                                                 STAGING='c6a1d4c3-5ac4-43d3-a37a-5a7e8159ded7'                                                  LIVE='ff9f2b5c-aeab-47da-a0b6-e19363652523'
-
 function ondemand_instances() {
-    aws --profile vdtest --region eu-west-1 opsworks describe-instances --stack-id ${ONDEMAND} | jq -r '.Instances[] | {Hostname: .Hostname, "IP Address": .PrivateIp}'
+    aws --profile vdtest --region eu-west-1 opsworks describe-instances --stack-id ${ONDEMAND} | jq -r '.Instances[] | {HOSTNAME: .Hostname, "IP ADDRESS": .PrivateIp, STATUS: .Status}'
 }
 
 function staging_instances() {
-    aws opsworks describe-instances --stack-id ${STAGING} | jq -r '.Instances[] | {Hostname: .Hostname, "IP Address": .PrivateIp}'    
+    aws opsworks describe-instances --stack-id ${STAGING} | jq -r '.Instances[] | {HOSTNAME: .Hostname, "IP ADDRESS": .PrivateIp, STATUS: .Status}'    
 }
 
 function live_instances() {
-    aws --region us-east-1 opsworks describe-instances --stack-id ${LIVE} | jq -r '.Instances[] | {Hostname: .Hostname, "IP Address": .PrivateIp}'
+    aws --region us-east-1 opsworks describe-instances --stack-id ${LIVE} | jq -r '.Instances[] | {HOSTNAME: .Hostname, "IP ADDRESS": .PrivateIp, STATUS: .Status}'
 }
