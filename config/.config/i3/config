@@ -165,4 +165,4 @@ bar {
 exec --no-startup-id feh --bg-scale ~/Pictures/wallhaven-618958.jpg
 
 # Remove window headers for i3
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
