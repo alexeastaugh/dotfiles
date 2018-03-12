@@ -13,6 +13,7 @@ URxvt*fading: 30
 URxvt*urgentOnBell: false
 URxvt.visualBell: true
 URxvt.cursorBlink: 1
+URxvt.perl-ext-common: selection-to-clipboard
 
 ! fonts
 URxvt.font:xft:Terminess Powerline:size=11
