@@ -19,7 +19,7 @@ POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 
 # Plugins ~/.oh-my-zsh/plugins/*
-plugins=(git kitchen aws knife docker)
+plugins=(git kitchen aws knife docker terraform)
 
 # Aliases and Functions
 source $ZSH/oh-my-zsh.sh
