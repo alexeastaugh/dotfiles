@@ -6,7 +6,7 @@ RED='\033[0;31m'
 CEXIT='\033[0m'
 
 # Aliases and functions
-alias aliases='grep "alias\|function" ~/.aliases | tail -n +3'
+alias aliases='grep "alias" ~/.aliases | tail -n +3'
 alias ffs='sudo "$BASH" -c "$(history -p !!)"'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -16,71 +16,9 @@ alias ping='ping -c 4'
 alias grep='grep --color=always'
 alias ip='ip -c' # This outputs in colour
 alias weather='curl wttr.in' # Nice terminal weather forecast
-alias wiki='cd /var/www/wikitten/library; echo "You are now in $PWD"; ls -l'
 alias verifypubkey='ssh-keygen -l -f'
 alias tree='tree -C' # Always output dir colours
-#alias wal='wal -t -b "#222D32"' # Colour for Adapta theme
 alias wal='wal -t -b "#2F343F"' # Colour for Arc theme
-#alias wal='wal -t -b "#3C3733"' # Colour for pop theme
-
-# Knife commands
-knife-bootstrap() {
-    knife bootstrap "$@" --ssh-user root --identity-file ~/.ssh/alex_personal/alex_01022017/alex_01022017 --node-name eastaughnode1 --run-list \'"$@"\'
-}
-
-knife-chef-client-run() {
-   knife ssh 'name:"$@"' 'sudo chef-client' --ssh-user root --identity-file ~/.ssh/alex_personal/alex_01022017/alex_01022017 --attribute ipaddress 
-}
-
-# virtualbox list vm's
-vblist() {
-    echo
-    VBL=$(vboxmanage list vms)
-    echo -e ${GREEN}"${VBL}"${CEXIT}
-    echo
-}
-
-# virtualbox start headless
-vbstart() {
-    vboxmanage startvm "$@" --type headless
-}
-
-# virtualbox stop
-vbstop() {
-    vboxmanage controlvm "$@" poweroff --type headless
-}
-
-# projects - Takes you to the projects folder and lists the contents
-projects() {
-    if [ -d ~/projects ];then
-        cd ~/projects; echo -e ${GREEN}"You are now in${CEXIT} ${RED}${PWD}${CEXIT}"; ls -l
-    else
-        echo -e ${RED}"Projects folder not yet created"${CEXIT}
-    fi
-}
-
-# dots - Take me to your dotfiles
-dots() {
-    cd ~/dotfiles; echo -e ${GREEN}"You are now in${CEXIT} ${RED}${PWD}${CEXIT}"; ls -l
-}
-
-# generatekey - Creates an rsa key with 4096 bytes and add the key name to the comments
-sshgeneratekey() {
-    if [ $# -eq 0 ];then
-        echo -e ${RED}"Please supply a comment for the key file"${CEXIT}
-    else
-        ssh-keygen -t rsa -b 4096 -C "$@"
-    fi
-}
-
-# cookbooks - Take me to your cookbooks
-cookbooks() {
-    if [ -d /home/$(whoami)/cookbooks ];then
-        cd /home/$(whoami)/cookbooks; echo -e ${GREEN}"You are now in${CEXIT} ${RED}${PWD}${CEXIT}"; ls
-    else
-        echo -e ${RED}"Cookbooks have not been cloned yet!"${CEXIT}
-    fi
-}
 
 # Scrot - screenshot tool
 alias scrot='scrot -q100 -s'
@@ -104,98 +42,3 @@ alias gl='git log'
 alias greset='git reset --soft HEAD^' # Remove last commit but keeps changes staged
 alias greset-hard='git reset --hard HEAD^' # Remove last commit AND all changes from staging/files
 
-# Convert youtube video to .mp3
-youtube2mp3() {
-    youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "$@"
-}
-
-connect_postgres_db() {
-    psql -U "$1" -h "$2"
-}
-
-################
-# WORK ALIASES #
-################
-
-# ssh to old platform using ip address
-connect() {
-    ssh -i ~/.ssh/alex_vd/GetOpticsAWSKey2013.pem ubuntu@"$@"
-}
-
-# Skip the jumpbox and go straight to point B
-jump() {
-    ssh -t jumpbox1 ssh aeastaugh@"$@"
-}
-
-# Gmail backup estimate with gyb
-backup_mailbox_estimate() {
-    sudo python3 /opt/got-your-back/gyb.py --email "$@" --action estimate 
-}
-
-# Gmail backups with gyb
-backup_mailbox() {
-    if mount | grep 10.0.1.218 > /dev/null; then
-        echo -e ${GREEN}"EFS is already mounted. Now backing up mailbox"${CEXIT}
-        sudo python3 /opt/got-your-back/gyb.py --email "$@" --local-folder /efs/Mailboxes/"$@"
-    else
-        sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.0.1.218:/ /efs 
-        echo -e  ${GREEN}"EFS is now mounted. Moving onto backup of mailbox"${CEXIT}
-        sudo python3 /opt/got-your-back/gyb.py --email "$@" --local-folder /efs/Mailboxes/"$@"
-    fi
-}
-
-# Gmail restore with gyb
-restore_mailbox() {
-    if mount | grep 10.0.1.218 > /dev/null; then
-        echo -e ${GREEN}"EFS is already mounted. Now restoring mailbox"${CEXIT}
-        sudo python3 /opt/got-your-back/gyb.py --email "$1" --action restore --local-folder /efs/Mailboxes/"$2" --label-restored "$2"
-    else
-        sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 10.0.1.218:/ /efs 
-        echo -e  ${GREEN}"EFS is now mounted. Moving onto the restore of mailbox"${CEXIT}
-        sudo python3 /opt/got-your-back/gyb.py --email "$1" --action restore --local-folder /efs/Mailboxes/"$2" --label-restored "$2"
-    fi
-}
-
-# AWS Hostname + IP ADDRESS
-# Add the variables below
-
-ONDEMAND=''
-STAGING=''
-LIVE=''
-
-ondemand_instances() {
-    aws --profile vdtest \
-        --region eu-west-1 \
-        opsworks describe-instances \
-        --stack-id ${ONDEMAND} | jq -r '.Instances[] | {HOSTNAME: .Hostname, "IP ADDRESS": .PrivateIp, STATUS: .Status}'
-}
-
-staging_instances() {
-    aws opsworks describe-instances \
-        --stack-id ${STAGING} | jq -r '.Instances[] | {HOSTNAME: .Hostname, "IP ADDRESS": .PrivateIp, STATUS: .Status}'    
-}
-
-live_instances() {
-    aws --region us-east-1 \
-        opsworks describe-instances \
-        --stack-id ${LIVE} | jq -r '.Instances[] | {HOSTNAME: .Hostname, "IP ADDRESS": .PrivateIp, STATUS: .Status}'
-}
-
-# Testing Opsworks form the cli
-
-opsworks_update_cookbooks() {
-    aws --profile vdtest --region eu-west-1 \
-        opsworks create-deployment \
-        --stack-id "$1" \
-        --layer-id "$2" \
-        --command "{\"Name\":\"update_custom_cookbooks\"}"
-}
-
-opsworks_configure() {
-    aws --profile vdtest \
-        --region eu-west-1 \
-        opsworks create-deployment \
-        --stack-id ${ONDEMAND} \
-        --layer-id 83a373d1-b4c2-4f41-94de-5c53a7a7b6d8 \
-        --command "{\"Name\":\"configure\"}"
-}
