@@ -1,5 +1,3 @@
-export TERM="xterm-256color"
-
 # Path to your oh-my-zsh installation.
 export ZSH=/home/alex/.oh-my-zsh
 
@@ -19,7 +17,7 @@ POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 
 # Plugins ~/.oh-my-zsh/plugins/*
-plugins=(git kitchen aws knife docker terraform)
+plugins=(git kitchen aws knife docker terraform vagrant)
 
 # Aliases and Functions
 source $ZSH/oh-my-zsh.sh
