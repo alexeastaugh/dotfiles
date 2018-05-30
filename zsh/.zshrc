@@ -26,9 +26,8 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.functions
 
-# ChefDK Ruby
-export PATH="/opt/chefdk/embedded/bin:$PATH"
-export PATH=$PATH:/home/alex/.chefdk/gem/ruby/2.4.0/bin
+# Set Chef env variables for zsh
+eval "$(chef shell-init zsh)"
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
