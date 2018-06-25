@@ -6,15 +6,15 @@ export ZSH=/home/alex/.oh-my-zsh
 #ZSH_THEME="jbergantine"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="terminalparty"
-#ZSH_THEME="theunraveler"
-ZSH_THEME="powerlevel9k/powerlevel9k" # Make sure this one installed.
+ZSH_THEME="theunraveler"
+#ZSH_THEME="powerlevel9k/powerlevel9k" # Make sure this one installed.
 
 # Powerlevel9k tweaks
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(rbenv vcs status root_indicator background_jobs history time)
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
-POWERLEVEL9K_SHORTEN_DELIMITER=""
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(rbenv vcs status root_indicator background_jobs history time)
+#POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+#POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
+#POWERLEVEL9K_SHORTEN_DELIMITER=""
 
 # Plugins ~/.oh-my-zsh/plugins/*
 plugins=(git kitchen aws knife docker terraform vagrant)
