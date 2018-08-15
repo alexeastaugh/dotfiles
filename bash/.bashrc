@@ -42,13 +42,3 @@ export PATH="/opt/chefdk/embedded/bin:$PATH"
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
 (cat ~/.cache/wal/sequences &)
-
-# Colour palette entries for gnome terminal colours. This is just for reference if applying manually
-#363333 - Palette entry 1
-#DE5F5F - Palette entry 2
-#82B882 - Palette entry 3
-#CCCC66 - Palette entry 4
-#7EA2C5 - Palette entry 5
-#B88AB8 - Palette entry 6
-#77CCCC - Palette entry 7
-#E5E5E5 - Palette entry 8
